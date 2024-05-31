@@ -2,9 +2,9 @@
 <?xml-md5 136571db86f0f372232545b1993e12f6?>
 <root name="Протокол стендового тестирования ПК - БЛОК">
 	<define>
-		<rlsm1_ip_address>172.20.4.147</RMU_ip_address>
+		<rlsm1_ip_address>172.20.4.147</rlsm1_ip_address>
 		<rlsm1_udp_port>54520</rlsm1_udp_port>
-		<rlsm2_ip_address>172.20.4.222</rlsm1_ip_address>
+		<rlsm2_ip_address>172.20.4.222</rlsm2_ip_address>
 		<rlsm2_udp_port>54525</rlsm2_udp_port>
 	</define>
 	<device id="rlsm1" name="РМУ-4">

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-md5 136571db86f0f372232545b1993e12f6?>
+<root name="Протокол стендового тестирования ПК - БЛОК">
+	<define>
+		<rlsm1_ip_address>172.20.4.222</rlsm1_ip_address>
+		<rlsm1_udp_port>54500</rlsm1_udp_port>
+		<rlsm2_ip_address>172.20.4.147</rlsm2_ip_address>
+		<rlsm2_udp_port>18195</rlsm2_udp_port>
+	</define>
+	<device id="rlsm1" name="РМУ-4">
+		<port type="udp" port="{@rlsm1_udp_port}" ip_address="{@rlsm1_ip_address}"></port>
+	</device>
+	<device id="rlsm2" name="РЛСМ-10-64 #1">
+		<port type="udp" port="{@rlsm2_udp_port}" ip_address="{@rlsm2_ip_address}"></port>
+	</device>
+	
+	<test id="test_exchange" name="Тест обмена РМУ-4 -> РЛСМ-10-64 #1" file="test_exchange1" proto_src="transparent" proto_dst="transparent" device_src="rlsm1" device_dst="rlsm2" duration="60" length="64" waiting="2000">
+	</test>
+
+	<test id="test_exchange" name="Тест обмена РЛСМ-10-64 #1 -> РМУ-4" file="test_exchange3" proto_src="transparent" proto_dst="transparent" device_src="rlsm2" device_dst="rlsm1" duration="60" length="64" waiting="2000">
+	</test>
+	
+	<!--
+	<test id="test_exchange" name="Тест обмена РЛСМ-10-64 #2 -> РМУ-4" file="test_exchange4" proto_src="transparent" proto_dst="transparent" device_src="rlsm3" device_dst="rlsm1" duration="300" length="64" waiting="2000">
+	</test>
+
+	<test id="test_exchange" name="Тест обмена РЛСМ-10-64 #2 -> РЛСМ-10-64 #1" file="test_exchange6" proto_src="transparent" proto_dst="transparent" device_src="rlsm3" device_dst="rlsm2" duration="60" length="64" waiting="2000">
+	</test>
+	-->
+
+</root>
