@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="report.xsl"?>
+<root date="29.08.2022 15:08:27" title="Протокол стендового тестирования УСО-БЛОК">
+ <test name="Тест обмена УСО - БЛОК/КЛУБ">
+  <row name="Начало">29.08.2022 15:08:29</row>
+  <row name="Версия источника"> version=5.9.3-4-g3bca92bd-master_h3, kernel=2.1, ramdisk=, kernel_mod=2.1</row>
+  <row name="Версия получателя">21:24.220 version : hard=2 soft=4.56 (Jul 14 2021 11:09:13) matrix=1 rev=1 tr_hard=4 tr_soft=3.17.3</row>
+  <row name="Объем данных">128</row>
+  <row name="L1.Передано байт">4930</row>
+  <row name="L1.Принято байт">4849</row>
+  <row name="L2.Передано пакетов">68</row>
+  <row name="L2.Принято пакетов">59</row>
+  <row name="L2.Ошибок всего">0</row>
+  <row name="L2.Ошибок CRC">0</row>
+  <row name="L2.Ошибок FSN">0</row>
+  <row name="L3.Передано пакетов">34</row>
+  <row name="L3.Принято пакетов">34</row>
+  <row name="L3.Принято корректных пакетов">34</row>
+  <row name="L3.Ошибок всего">0</row>
+  <row name="L3.Ошибок CRC">0</row>
+  <row name="L3.Ошибок FSN">0</row>
+  <row name="L3.Время доставки (мс), максимальное">1414</row>
+  <row name="L3.Время доставки (мс), минимальное">1203</row>
+  <row name="L3.Время доставки (мс), среднее">1276</row>
+  <plot source="uso_test_exchange.csv" series="[3,4]" title="Канал (L1)" id="0" axis_x="0"/>
+  <plot source="uso_test_exchange.csv" series="[5,6,7]" title="Протокол (L2)" id="1" axis_x="0"/>
+  <plot source="uso_test_exchange.csv" series="[11,12,14]" title="Приложение (L3)" id="2" axis_x="0"/>
+  <plot source="uso_test_exchange.csv" series="[17]" title="Время доставки" id="3" axis_x="0"/>
+  <plot source="uso_test_exchange.csv" series="[18]" title="Скорость" id="4" axis_x="0"/>
+  <row name="Окончание">29.08.2022 15:10:12</row>
+ </test>
+ <test name="Тест обмена БЛОК/КЛУБ - УСО">
+  <row name="Начало">29.08.2022 15:10:12</row>
+  <row name="Версия источника">21:24.220 version : hard=2 soft=4.56 (Jul 14 2021 11:09:13) matrix=1 rev=1 tr_hard=4 tr_soft=3.17.3</row>
+  <row name="Версия получателя"> version=5.9.3-4-g3bca92bd-master_h3, kernel=2.1, ramdisk=, kernel_mod=2.1</row>
+  <row name="Объем данных">64</row>
+  <row name="L1.Передано байт">2448</row>
+  <row name="L1.Принято байт">2448</row>
+  <row name="L2.Передано пакетов">34</row>
+  <row name="L2.Принято пакетов">34</row>
+  <row name="L2.Ошибок всего">0</row>
+  <row name="L2.Ошибок CRC">0</row>
+  <row name="L2.Ошибок FSN">0</row>
+  <row name="L3.Передано пакетов">34</row>
+  <row name="L3.Принято пакетов">34</row>
+  <row name="L3.Принято корректных пакетов">34</row>
+  <row name="L3.Ошибок всего">0</row>
+  <row name="L3.Ошибок CRC">0</row>
+  <row name="L3.Ошибок FSN">0</row>
+  <row name="L3.Время доставки (мс), максимальное">1614</row>
+  <row name="L3.Время доставки (мс), минимальное">1365</row>
+  <row name="L3.Время доставки (мс), среднее">1519</row>
+  <plot source="klub_test_exchange.csv" series="[3,4]" title="Канал (L1)" id="5" axis_x="0"/>
+  <plot source="klub_test_exchange.csv" series="[5,6,7]" title="Протокол (L2)" id="6" axis_x="0"/>
+  <plot source="klub_test_exchange.csv" series="[11,12,14]" title="Приложение (L3)" id="7" axis_x="0"/>
+  <plot source="klub_test_exchange.csv" series="[17]" title="Время доставки" id="8" axis_x="0"/>
+  <plot source="klub_test_exchange.csv" series="[18]" title="Скорость" id="9" axis_x="0"/>
+  <row name="Окончание">29.08.2022 15:11:55</row>
+ </test>
+</root>
