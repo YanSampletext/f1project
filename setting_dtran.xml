@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-md5 846be2a0b24eb75a5ba38516250670bd?>
+<?signature hash="0f7ded75e5732dfbc9edbb3ef2775b2b" timestamp="1635945318"?>
+<root name="Протокол стендового тестирования РЛСМ1 - РЛСМ2">
+	<define>
+		<rlsm1_ip_address>172.20.4.147</rmu-4_ip_address>
+		<rlsm1_udp_port>54520</rlsm1_udp_port>
+		<rlsm2_ip_address>172.20.4.222</rlsm2_ip_address>
+		<rlsm2_udp_port>31500</rlsm2_udp_port>
+	</define>
+	<device id="rlsm1" name="РМУ-4 #1">
+		<port type="udp" bind_port="0" port="{@rlsm1_udp_port}" ip_address="{@rlsm1_ip_address}"></port>
+	</device>
+	<device id="rlsm2" name="РЛСМ-10 #2">
+		<port type="udp" bind_port="0" port="{@rlsm2_udp_port}" ip_address="{@rlsm2_ip_address}"></port>
+	</device>
+	<test id="test_exchange" name="Тест обмена РЛСМ-10-64 #1 -&gt; РЛСМ-10-64 #2" file="test_exchange" proto_src="dtranms" proto_dst="dtranms" device_src="rlsm1" device_dst="rlsm2" duration="60" length="22" waiting="3000" source_address="36" target_address="18" wait_sendcomplete="480" dtran.tm="1" dtran.sid="6" dtran.fec="0">
+	</test>
+</root>
